@@ -1,8 +1,8 @@
 @import "mixin";
 @import "color";
 
-//counter
 .counter {
+  margin: 20px auto;
   padding: 20px 10px;
   background-color: rgba(255, 228, 196, 0.669);
   padding: 40px 30px;
@@ -11,22 +11,23 @@
   @include display(flex, space-evenly, center, row);
   text-align: center;
 
-  &__wrapper {
+  &__wrapper,
+  &__memo__wrapper,
+  &__form__wrapper {
     padding: 10px 20px;
-    h3 {
-      letter-spacing: 1.2px;
-    }
-    button {
-      @include button($color-white, $color-orange);
-    }
-    p {
-      .count {
-        color: $color-teal;
-        font-weight: bolder;
-      }
+  }
+
+  h3 {
+    letter-spacing: 1.2px;
+  }
+  p {
+    margin: 4px auto;
+    span {
+      color: $color-teal;
+      font-weight: bolder;
     }
   }
+  button {
+    @include button($color-white, $color-orange);
+  }
 }
-
-
-//memo-wraper
