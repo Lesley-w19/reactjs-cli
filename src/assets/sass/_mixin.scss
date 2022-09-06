@@ -3,6 +3,7 @@
     flex-direction: $flexdir;
     justify-content: $justify;
     align-items: $align;
+    flex-wrap: wrap;
   }
   @mixin button($color, $bg) {
     margin: 20px auto;
