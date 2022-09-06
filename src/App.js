@@ -5,7 +5,8 @@ import Form from "./components/Form";
 
 const App = () => {
   return (
-    <div>
+    <div className="container">
+      <h1>hello</h1>
       <Counter name="Counter example" />
       <Todos name="Lists rendering example" />
       <Form name="Form example" />
