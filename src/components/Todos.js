@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Todos = () => {
+const Todos = (props) => {
+  const {name} = props;
   // const tasks = [
   //   {
   //     id: 1,
@@ -70,16 +71,18 @@ const Todos = () => {
     }
     Todos();
   }, []);
+  //since there is no dependency array the useEffect only renders once.
   // console.log(tasks);
   return (
     <div className="lists-wrapper">
+      <h3>{name}</h3>
       {tasks?.map((task) => (
         <div className="list" key={task.id}>
           <div className="list__headers">
-            <h3>{task.title}</h3>
+            <h5>{task.title}</h5>
             <p>{task.body}</p>
             <h6>
-              {task?.tags?.map((tag, index) => (
+              {task.tags?.map((tag, index) => (
                 <p key={index}>{tag}</p>
               ))}
             </h6>
