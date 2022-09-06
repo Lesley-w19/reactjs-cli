@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Form = (props) => {
   //   console.log(props);
   const { name } = props;
-  let [message, setMessage] = useState(name);
+  const [message, setMessage] = useState(name);
+
+  const [show, setShow] = useState(false);
+  const elementInput = useRef();
   useEffect(() => {
-    // message = name;
-  }, [message]);
+    const input = elementInput.current;
+    console.log(input);
+  }, []);
+
   return (
     <div className="form-wrapper">
       <form>
-        <button>Dark mode toggle</button>
         <input
           type="text"
+          ref={elementInput}
           value={message}
           onChange={(e) => {
             e.preventDefault();
@@ -21,6 +26,23 @@ const Form = (props) => {
         />
       </form>
       <div className="form__output">{message}</div>
+
+      <div className="par__wrapper">
+        <button>Dark mode toggle</button>
+        <button onClick={() => setShow(true)}>Show Paragragh</button>
+        {show ? (
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. At unde
+            necessitatibus, sed, dolor earum illo voluptatem adipisci quia
+            officia eveniet voluptatum est ea soluta! Neque, magnam vel dolore,
+            nisi corrupti maxime voluptates aut numquam hic saepe quas sunt
+            voluptatem cupiditate perspiciatis mollitia, similique qui beatae
+            fugiat vero! Labore, tempore laudantium.
+          </p>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };
