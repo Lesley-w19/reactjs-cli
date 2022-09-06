@@ -60,16 +60,22 @@ const Todos = () => {
     },
   ];
 
+  //   console.log(tasks);
   return (
     <div className="lists-wrapper">
-      {tasks?.map((task) => {
-        <div className="lists">
-          <div className="list-headers">
-            <h3>{task.todo}</h3>
-            <p>{task.completed}</p>
+      {tasks?.map((task) => (
+        <div className="list" key={task.id}>
+          <div className="list__headers">
+            <h3>{task.title}</h3>
+            <p>{task.body}</p>
+            <h6>
+              {task?.tags?.map((tag) => (
+                <p>{tag}</p>
+              ))}
+            </h6>
           </div>
         </div>
-      })}
+      ))}
     </div>
   );
 };
