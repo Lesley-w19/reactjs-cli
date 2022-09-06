@@ -12,11 +12,16 @@ const Counter = (props) => {
 
   
   return (
-    <div className="counter-wrapper">
+    <div className="counter">
+        <div className="counter__wrapper">
       <h3>{name}</h3>
-      <button className="btn btn-counter" onClick={counter}>Add count</button>
+      <button onClick={counter}>Add count</button>
       <p> The count is : <span className="count">{count}</span></p>
     </div>
+
+
+    </div>
+  
   );
 };
 
