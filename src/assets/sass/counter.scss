@@ -1,6 +1,7 @@
 @import "mixin";
 @import "color";
 
+//counter
 .counter {
   padding: 20px 10px;
   background-color: rgba(255, 228, 196, 0.669);
@@ -8,14 +9,24 @@
   width: 100vw;
   min-height: 20vh;
   @include display(flex, space-evenly, center, row);
+  text-align: center;
 
-  &.__wrapper {
-    .btn-counter {
+  &__wrapper {
+    padding: 10px 20px;
+    h3 {
+      letter-spacing: 1.2px;
+    }
+    button {
       @include button($color-white, $color-orange);
     }
-    .count {
-      color: $color-teal;
-      font-weight: bolder;
+    p {
+      .count {
+        color: $color-teal;
+        font-weight: bolder;
+      }
     }
   }
 }
+
+
+//memo-wraper
