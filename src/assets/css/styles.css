@@ -9,8 +9,15 @@
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
+  text-align: center;
 }
-.counter.__wrapper .btn-counter {
+.counter__wrapper {
+  padding: 10px 20px;
+}
+.counter__wrapper h3 {
+  letter-spacing: 1.2px;
+}
+.counter__wrapper button {
   margin: 20px auto;
   padding: 10px 30px;
   border: none;
@@ -19,7 +26,7 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.counter.__wrapper .count {
+.counter__wrapper p .count {
   color: teal;
   font-weight: bolder;
 }
