@@ -84,8 +84,8 @@ const Todos = (props) => {
               <p>{task.body}</p>
               <h6>
                 {task.tags?.map((tag, index) => (
-                  <ul>
-                    <li key={index}>{tag}</li>
+                  <ul key={index}>
+                    <li>{tag}</li>
                   </ul>
                 ))}
               </h6>
