@@ -1,9 +1,14 @@
 // import logo from './logo.svg';
 import Counter from './components/Counter';
+import Todos from './components/Todos';
 
 const App = () =>{
   return(
-    <Counter name="Counter example"/>
+    <div>
+        <Counter name="Counter example"/>
+    <Todos name="Lists rendering example"/>
+    </div>
+  
   )
 }
 
