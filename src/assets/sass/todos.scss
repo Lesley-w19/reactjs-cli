@@ -1,0 +1,41 @@
+@import "mixin";
+@import "color";
+
+.todo {
+  padding: 20px 30px;
+  margin: 10px auto;
+  background-color: rgb(248, 196, 207);
+
+  &__list {
+    @include display(flex, space-evenly, center, row);
+    padding: 10px 20px;
+    .error {
+      color: red;
+      font-size: 25px;
+    }
+    &__wrapper {
+      background-color: white;
+      padding: 10px 20px;
+      margin: 3px auto;
+      letter-spacing: 1px;
+
+      h5 {
+        font-size: 22px;
+      }
+      p {
+        width: 70%;
+        margin: 10px 0;
+      }
+      h6 {
+        padding: 20px 30px;
+
+        ul {
+          @include display(flex, start, center, row);
+          li {
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

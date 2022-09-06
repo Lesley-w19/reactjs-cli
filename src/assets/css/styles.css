@@ -1,4 +1,12 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
 .counter {
+  margin: 20px auto;
   padding: 20px 10px;
   background-color: rgba(255, 228, 196, 0.669);
   padding: 40px 30px;
@@ -11,13 +19,20 @@
   flex-wrap: wrap;
   text-align: center;
 }
-.counter__wrapper {
+.counter__wrapper, .counter__memo__wrapper, .counter__form__wrapper {
   padding: 10px 20px;
 }
-.counter__wrapper h3 {
+.counter h3 {
   letter-spacing: 1.2px;
 }
-.counter__wrapper button {
+.counter p {
+  margin: 4px auto;
+}
+.counter p span {
+  color: teal;
+  font-weight: bolder;
+}
+.counter button {
   margin: 20px auto;
   padding: 10px 30px;
   border: none;
@@ -26,16 +41,49 @@
   border-radius: 10px;
   cursor: pointer;
 }
-.counter__wrapper p .count {
-  color: teal;
-  font-weight: bolder;
-}
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+.todo {
+  padding: 20px 30px;
+  margin: 10px auto;
+  background-color: #f8c4cf;
+}
+.todo__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+.todo__list .error {
+  color: red;
+  font-size: 25px;
+}
+.todo__list__wrapper {
+  background-color: white;
+  padding: 10px 20px;
+  margin: 3px auto;
   letter-spacing: 1px;
+}
+.todo__list__wrapper h5 {
+  font-size: 22px;
+}
+.todo__list__wrapper p {
+  width: 70%;
+  margin: 10px 0;
+}
+.todo__list__wrapper h6 {
+  padding: 20px 30px;
+}
+.todo__list__wrapper h6 ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.todo__list__wrapper h6 ul li {
+  margin: 0 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

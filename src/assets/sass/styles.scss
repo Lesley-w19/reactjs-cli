@@ -1,10 +1,9 @@
-// @use "./counter";
-
-@import "./counter.scss";
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   letter-spacing: 1px;
 }
+
+@import "./counter.scss";
+@import "./todos.scss";
