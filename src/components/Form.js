@@ -10,6 +10,7 @@ const Form = (props) => {
   return (
     <div className="form-wrapper">
       <form>
+        <button>Dark mode toggle</button>
         <input
           type="text"
           value={message}
