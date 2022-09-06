@@ -1,5 +1,6 @@
 .counter {
   padding: 20px 10px;
+  background-color: #ec4300;
 }
 .counter.__wrapper {
   background-color: rgba(255, 228, 196, 0.669);
