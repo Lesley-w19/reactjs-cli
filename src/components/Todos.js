@@ -74,30 +74,32 @@ const Todos = (props) => {
   //since there is no dependency array the useEffect only renders once.
   // console.log(tasks);
   return (
-    <div className="lists-wrapper">
+    <div className="todo">
       <h3>{name}</h3>
-      {tasks?.length > 0 ? (
-        tasks?.map((task) => (
-          <div className="list" key={task.id}>
-            <div className="list__headers">
-              <h5>{task.title}</h5>
-              <p>{task.body}</p>
-              <h6>
-                {task.tags?.map((tag, index) => (
-                  <ul key={index}>
-                    <li>{tag}</li>
-                  </ul>
-                ))}
-              </h6>
+      <div className="todo__list">
+        {tasks?.length > 0 ? (
+          tasks?.map((task) => (
+            <div className="todo__list__wrapper" key={task.id}>
+              <div>
+                <h5>{task.title}</h5>
+                <p>{task.body}</p>
+                <h6>
+                  {task.tags?.map((tag, index) => (
+                    <ul key={index}>
+                      <li>{tag}</li>
+                    </ul>
+                  ))}
+                </h6>
+              </div>
             </div>
+          ))
+        ) : (
+          <div className="error">
+            {" "}
+            <h2>Tasks not found</h2>
           </div>
-        ))
-      ) : (
-        <div>
-          {" "}
-          <h2>Tasks not found</h2>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
