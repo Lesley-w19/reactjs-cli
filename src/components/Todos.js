@@ -69,8 +69,8 @@ const Todos = () => {
             <h3>{task.title}</h3>
             <p>{task.body}</p>
             <h6>
-              {task?.tags?.map((tag) => (
-                <p>{tag}</p>
+              {task?.tags?.map((tag, index) => (
+                <p key={index}>{tag}</p>
               ))}
             </h6>
           </div>
