@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Todos = (props) => {
-  const {name} = props;
+  const { name } = props;
   // const tasks = [
   //   {
   //     id: 1,
@@ -76,19 +76,28 @@ const Todos = (props) => {
   return (
     <div className="lists-wrapper">
       <h3>{name}</h3>
-      {tasks?.map((task) => (
-        <div className="list" key={task.id}>
-          <div className="list__headers">
-            <h5>{task.title}</h5>
-            <p>{task.body}</p>
-            <h6>
-              {task.tags?.map((tag, index) => (
-                <p key={index}>{tag}</p>
-              ))}
-            </h6>
+      {tasks?.length > 0 ? (
+        tasks?.map((task) => (
+          <div className="list" key={task.id}>
+            <div className="list__headers">
+              <h5>{task.title}</h5>
+              <p>{task.body}</p>
+              <h6>
+                {task.tags?.map((tag, index) => (
+                  <ul>
+                    <li key={index}>{tag}</li>
+                  </ul>
+                ))}
+              </h6>
+            </div>
           </div>
+        ))
+      ) : (
+        <div>
+          {" "}
+          <h2>Tasks not found</h2>
         </div>
-      ))}
+      )}
     </div>
   );
 };
