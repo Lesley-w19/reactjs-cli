@@ -1,0 +1,34 @@
+@import "mixin";
+@import "color";
+
+.form {
+  margin: 10px auto;
+  padding: 20px 30px;
+  @include display(flex, space-evenly, center, column);
+  &__wrapper {
+    margin: 20px auto;
+
+    input {
+      padding: 10px 20px;
+      border: 1px solid $color-teal;
+      border-radius: 2px;
+      margin: 5px auto;
+      width: 200px;
+    }
+    &__output {
+      margin: 1px auto;
+    }
+  }
+
+  button {
+    @include button($color-white, $color-teal);
+  }
+
+  .par__wrapper {
+    p {
+      width: 70%;
+      margin: 0;
+      padding: 20px 30px;
+    }
+  }
+}
