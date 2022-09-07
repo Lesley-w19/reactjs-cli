@@ -7,9 +7,9 @@ const App = () => {
   return (
     <div className="container">
       <h1>hello</h1>
+      <Form name="Change form text." />
       <Counter name="Counter example" />
       <Todos name="Lists rendering example" />
-      <Form name="Form example" />
     </div>
   );
 };
