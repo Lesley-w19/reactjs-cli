@@ -6,7 +6,7 @@ import Form from "./components/Form";
 const App = () => {
   return (
     <div className="container">
-      <h1>hello</h1>
+      {/* <h1>hel lo</h1> */}
       <Form name="Change form text." />
       <Counter name="Counter example" />
       <Todos name="Lists rendering example" />
